@@ -9,8 +9,9 @@ def generate_response(prompt):
         model="davinci:ft-dlubal-software-gmbh-2023-06-02-11-03-33",
         prompt=prompt,
         max_tokens=200,
-        temperature=0,
+        temperature=0.25,
         frequency_penalty = 1.0,
+        presence_penalty = 0.43,
         stop=["END"]
     )
 
@@ -31,7 +32,7 @@ if 'past' not in st.session_state:
     st.session_state['past'] = []
 
 def get_text():
-    input_text = st.text_input("Ask something to the AI Support Asisstant: ","What is RFEM?", key="input")
+    input_text = st.text_input("Ask something to the AI Support Asisstant: ","How can I display mode shapes in RFEM 6 and RSTAB 9?", key="input")
     return input_text
 
 user_input = get_text()
