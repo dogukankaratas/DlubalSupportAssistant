@@ -8,7 +8,7 @@ def generate_response(prompt):
     completions = openai.Completion.create(
         model="davinci:ft-dlubal-software-gmbh-2023-06-02-11-03-33",
         prompt=prompt,
-        max_tokens=250,
+        max_tokens=200,
         temperature=0,
         frequency_penalty = 1.0,
         stop=["END"]
