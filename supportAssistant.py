@@ -32,7 +32,7 @@ if 'past' not in st.session_state:
     st.session_state['past'] = []
 
 def get_text():
-    input_text = st.text_input("Ask something to the AI Support Asisstant: ","What is possible with RFEM6?", key="input")
+    input_text = st.text_input("Ask something to the AI Support Asisstant: ","What is Webservices in RFEM6?", key="input")
     return input_text
 
 user_input = get_text()
